@@ -1,7 +1,7 @@
 @Library('helpers') _
 
 standardBuild {
-    environment = 'maven'
+    tool = 'M3'
     mainScript = '''
 mvn clean install
 '''
