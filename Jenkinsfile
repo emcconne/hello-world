@@ -9,4 +9,7 @@ mvn clean install
 ls -l
 ./hello-world
 '''
+
+sh "after the carnage"
+
 }
