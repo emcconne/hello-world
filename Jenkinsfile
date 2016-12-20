@@ -10,6 +10,4 @@ ls -l
 ./hello-world
 '''
 
-sh 'echo "after the carnage"'
-
 }
