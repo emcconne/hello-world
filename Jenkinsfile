@@ -1,14 +1,18 @@
-@Library('helpers') _
-
-node {
-	standardBuild {
-	    tool = 'M3'
-	    mainScript = '''
-			mvn clean install
-		'''
-	    postScript = '''
-			ls -l
-			pwd
-		'''
+pipeline {
+	agent any
+	stages {
+		stage('Build') {
+			sh 'mvn install'
+		}
+		post {
+			always {
+				echo 'stage scope'
+			}
+		}
+	}
+	post {
+		always {
+			echo 'pipeline scope'
+		}
 	}
 }
