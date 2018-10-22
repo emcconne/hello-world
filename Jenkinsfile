@@ -2,7 +2,9 @@ pipeline {
 	agent any
 	stages {
 		stage('Build') {
-			sh 'mvn install'
+			steps {
+				sh 'mvn install'
+			}
 		}
 		post {
 			always {
